@@ -1,7 +1,7 @@
 <?php
 // used to connect to the database
 $host = "localhost";
-$db_name = "phpBeginnerCrudLevel1";
+$db_name = "phpBegginerCrudLevel1";
 $username = "root";
 $password = '$Daniel99xdxd$';
   
