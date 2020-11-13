@@ -44,7 +44,21 @@
         //check if more than 0 record found
         if($num>0){
         
-            // data from database will be here
+            echo "<table class='table table-hover table-responsive table-bordered'>";//start table
+ 
+                //creating our table heading
+                echo "<tr>";
+                    echo "<th>ID</th>";
+                    echo "<th>Name</th>";
+                    echo "<th>Description</th>";
+                    echo "<th>Price</th>";
+                    echo "<th>Action</th>";
+                echo "</tr>";
+                
+                // table body will be here
+            
+            // end table
+            echo "</table>";
             
         }
         
