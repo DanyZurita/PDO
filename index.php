@@ -103,7 +103,17 @@
             
             // end table
             echo "</table>";
+            // PAGINATION
+            // count total number of rows
+            $query = "SELECT COUNT(*) as total_rows FROM products";
+            $stmt = $con->prepare($query);
             
+            // execute query
+            $stmt->execute();
+            
+            // get total rows
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            $total_rows = $row['total_rows'];
         }
         
         // if no records found
