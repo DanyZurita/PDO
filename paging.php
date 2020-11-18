@@ -45,7 +45,16 @@ for ($x=$initial_num; $x<$condition_limit_num; $x++) {
     }
 }
  
-// last page button will be here
+// last page button
+if($page<$total_pages){
+    $next_page = $page + 1;
+ 
+    echo "<li>";
+        echo "<a href='{$page_url}page={$next_page}'>";
+            echo "<span style='margin:0 .5em;'>»</span>";
+        echo "</a>";
+    echo "</li>";
+}
  
 echo "</ul>";
 ?>
