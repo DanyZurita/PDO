@@ -95,6 +95,28 @@
                         if(!is_dir($target_directory)){
                             mkdir($target_directory, 0777, true);
                         }
+
+                        // if $file_upload_error_messages is still empty
+                        if(empty($file_upload_error_messages)){
+                            // it means there are no errors, so try to upload the file
+                            if(move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)){
+                                // it means photo was uploaded
+                            }else{
+                                echo "<div class='alert alert-danger'>";
+                                    echo "<div>Unable to upload photo.</div>";
+                                    echo "<div>Update the record to upload photo.</div>";
+                                echo "</div>";
+                            }
+                        }
+                        
+                        // if $file_upload_error_messages is NOT empty
+                        else{
+                            // it means there are some errors, so show them to user
+                            echo "<div class='alert alert-danger'>";
+                                echo "<div>{$file_upload_error_messages}</div>";
+                                echo "<div>Update the record to upload photo.</div>";
+                            echo "</div>";
+                        }
                     }
                 }else{
                     echo "<div class='alert alert-danger'>Unable to save record.</div>";
