@@ -55,6 +55,18 @@
                 // Execute the query
                 if($stmt->execute()){
                     echo "<div class='alert alert-success'>Record was saved.</div>";
+                    // now, if image is not empty, try to upload the image
+                    if($image){
+                    
+                        // sha1_file() function is used to make a unique file name
+                        $target_directory = "uploads/";
+                        $target_file = $target_directory . $image;
+                        $file_type = pathinfo($target_file, PATHINFO_EXTENSION);
+                    
+                        // error message is empty
+                        $file_upload_error_messages="";
+                    
+                    }
                 }else{
                     echo "<div class='alert alert-danger'>Unable to save record.</div>";
                 }
