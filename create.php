@@ -65,6 +65,18 @@
                     
                         // error message is empty
                         $file_upload_error_messages="";
+                        // make sure that file is a real image
+                        $check = getimagesize($_FILES["image"]["tmp_name"]);
+                        if($check!==false){
+                            // submitted file is an image
+                        }else{
+                            $file_upload_error_messages.="<div>Submitted file is not an image.</div>";
+                        }
+                        // make sure certain file types are allowed
+                        $allowed_file_types=array("jpg", "jpeg", "png", "gif");
+                        if(!in_array($file_type, $allowed_file_types)){
+                            $file_upload_error_messages.="<div>Only JPG, JPEG, PNG, GIF files are allowed.</div>";
+                        }
                     
                     }
                 }else{
