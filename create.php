@@ -76,6 +76,10 @@
                     <td><input type='text' name='price' class='form-control' /></td>
                 </tr>
                 <tr>
+                    <td>Photo</td>
+                    <td><input type="file" name="image" /></td>
+                </tr>
+                <tr>
                     <td></td>
                     <td>
                         <input type='submit' value='Save' class='btn btn-primary' />
