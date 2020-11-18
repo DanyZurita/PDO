@@ -89,6 +89,12 @@
                         if($_FILES['image']['size'] > (1024000)){
                             $file_upload_error_messages.="<div>Image must be less than 1 MB in size.</div>";
                         }
+
+                        // make sure the 'uploads' folder exists
+                        // if not, create it
+                        if(!is_dir($target_directory)){
+                            mkdir($target_directory, 0777, true);
+                        }
                     }
                 }else{
                     echo "<div class='alert alert-danger'>Unable to save record.</div>";
