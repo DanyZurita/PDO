@@ -44,9 +44,13 @@
             echo "<div class='alert alert-success'>Record was deleted.</div>";
         }
         
-        // select all data
-        $query = "SELECT id, name, description, price FROM products ORDER BY id DESC";
+        // select data for current page
+        $query = "SELECT id, name, description, price FROM products ORDER BY id DESC
+        LIMIT :from_record_num, :records_per_page";
+
         $stmt = $con->prepare($query);
+        $stmt->bindParam(":from_record_num", $from_record_num, PDO::PARAM_INT);
+        $stmt->bindParam(":records_per_page", $records_per_page, PDO::PARAM_INT);
         $stmt->execute();
         
         // this is how to get number of rows returned
