@@ -44,6 +44,7 @@
             $name = $row['name'];
             $description = $row['description'];
             $price = $row['price'];
+            $image = htmlspecialchars($row['image'], ENT_QUOTES);
         }
         
         // show error
