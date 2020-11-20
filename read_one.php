@@ -28,7 +28,7 @@
         // read current record's data
         try {
             // prepare select query
-            $query = "SELECT id, name, description, price FROM products WHERE id = ? LIMIT 0,1";
+            $query = "SELECT id, name, description, price, image FROM products WHERE id = ? LIMIT 0,1";
             $stmt = $con->prepare( $query );
         
             // this is the first question mark
