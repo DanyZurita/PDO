@@ -23,4 +23,6 @@
 
 [Link al repositorio](https://github.com/DanyZurita/PDO)
 
+[Repositorio Remoto](http://dzurita.hopto.org/PDO/index.php)
+
 - El proyecto tiene una base de datos local en MySQL con la configuración correspondiente en `/config/database.php` y el contenido de los productos en `/dev/products.sql`.
