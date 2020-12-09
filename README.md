@@ -20,3 +20,7 @@
         - Primero se extrae en la query de `SELECT` la referencia al archivo img que vamos a modificar y se añade su representación al form, tanto para el archivo original como el nuevo campo imput para subir el nuevo archivo.
         - Se añade el campo a la query de `UPDATE` el nuevo campo a actualizar, se bindea el parametro y se realizan todas las comprobaciones del `create.php` al nuevo archivo.
         -Se comprube creando un nuevo archivo y actualizando varias veces la img que el código funciona correctamente.
+
+[Link al repositorio](https://github.com/DanyZurita/PDO)
+
+- El proyecto tiene una base de datos local en MySQL con la configuración correspondiente en `/config/database.php` y el contenido de los productos en `/dev/products.sql`.
